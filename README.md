@@ -76,11 +76,18 @@ Figure 7: Model Predictions
 
 The ROC curve analysis confirms the model’s robust performance, with the curve sharply maintaining an AUC of 0.98.
 Training dynamics analysis shows proper convergence without significant overfitting. The training accuracy progressively improved from approximately 51% to 90%, while validation accuracy quickly reached 80% before gradually improving to 87%. The consistent improvement in validation metrics throughout training indicates good generalization capability. The initial gap between training and validation performance narrowed over time, suggesting that the regularization techniques effectively prevented overfitting despite the limited dataset size.
+
 Prediction probability analysis reveals that most samples were classified with high confidence, with few cases falling near the decision threshold. This suggests the model learned robust discriminative features, further validating its potential clinical utility for brain tumor detection.
+
 Summary
+
 This study demonstrates the efficacy of transfer learning with EfficientNetB0 for brain tumor detection in MRI images, achieving 91.18% accuracy despite dataset limitations. Strategic implementation of data augmentation, coupled with careful hyperparameter optimization, proved crucial for model performance. Unfreezing the last eight layers of EfficientNetB0 struck an optimal balance between leveraging pre-trained features and domain adaptation. The model’s high precision for tumor detection (95%) minimizes false positives, though the presence of two false negatives requires attention in future work.
 Although implementation could benefit from added advanced segmentation techniques, exploring ensemble approaches to reduce false negatives and generalise better. This work contributes a practical approach to brain tumor detection that balances performance with implementation feasibility in resource-constrained clinical environments.
+
+
 References
+
+
 [1] [Online; accessed 20. Mar. 2025]. May 2023. URL: https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2023/05/Statistical-Release-18th-May-2023-PDF-471KB-1.pdf.
 [2] Akmalbek Bobomirzaevich Abdusalomov, Mukhriddinov, M., and Whangbo, T. K. “Brain Tumor Detection Based on Deep Learning Approaches and Magnetic Resonance Imaging”. In: Cancers 15.16 (Aug. 2023), p. 4172. DOI: 10.3390/cancers15164172.
 [3] Serra Aksoy and Pritika Dasgupta. “AI-Powered Neuro-Oncology: EfficientNetB0’s Role in Tumor Differentiation”. In: Clin. Transl. Neurosci. 9.1 (Jan. 2025), p. 2. ISSN: 2514-183X. DOI: 10.3390/ctn9010002.
